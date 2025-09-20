@@ -1,6 +1,6 @@
 minetest.register_craftitem("bestlobster:lobster", {
 	description = ("Raw Lobster"),
-	inventory_image = "best_lobster_lobster.png",
+	inventory_image = "bestlobster_lobster.png",
 	groups = {food_lobster = 1},
 	on_use = minetest.item_eat(-2), -- It is not healthy to eat raw Lobsters
 })
@@ -14,7 +14,7 @@ minetest.register_craft({
 
 minetest.register_craftitem("bestlobster:lobster_boiled", {
 	description = ("Boiled Lobster"),
-	inventory_image = "best_lobster_lobster_boiled.png",
+	inventory_image = "bestlobster_lobsterboiled.png",
 	groups = {food_lobster = 1},
 	on_use = minetest.item_eat(5),
 })
