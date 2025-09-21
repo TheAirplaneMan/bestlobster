@@ -90,7 +90,7 @@ minetest.register_craftitem("bestlobster:seafood_boil", {
 minetest.register_craft({
 	type = "shapeless",
 	output = "bestlobster:seafood_boil",
-	recipe = {"bestlobster:potato_boiled", "bestlobster:potato_boiled", "bestlobster:carrot_boiled", "bestlobster:carrot_boiled", "bestlobster:lobster"},
+	recipe = {"bestlobster:potato_boiled", "bestlobster:potato_boiled", "bestlobster:carrot_boiled", "bestlobster:carrot_boiled", "bestlobster:lobster_boiled"},
 })
 
 
