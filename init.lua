@@ -176,3 +176,89 @@ minetest.register_craft({
 		{"", "default:obsidian_shard", ""},
 	}
 })
+
+
+
+
+
+-- Wild Potatoes and Carrots
+
+minetest.register_decoration({
+	name = "bestlobster:potato_wild",
+	deco_type = "simple",
+	place_on = {"default:dirt_with_coniferous_litter"},
+	sidelen = 16,
+	noise_params = {
+		offset = -0.1,
+		scale = 0.1,
+		spread = {x = 50, y = 50, z = 50},
+		seed = 2025,
+		persist = 0.7
+	},
+	biomes = {"coniferous_forest"},
+	y_max = 31000,
+	y_min = 1,
+	decoration = "bestlobster:potato_wild",
+})
+
+minetest.register_decoration({
+	name = "bestlobster:carrot_wild",
+	deco_type = "simple",
+	place_on = {"default:dirt_with_grass"},
+	sidelen = 16,
+	noise_params = {
+		offset = -0.1,
+		scale = 0.1,
+		spread = {x = 50, y = 50, z = 50},
+		seed = 2026,
+		octaves = 3,
+		persist = 0.7
+	},
+	biomes = {"decideous_forest"},
+	y_max = 31000,
+	y_min = 1,
+	decoration = "bestlobster:carrot_wild",
+})
+
+
+
+
+minetest.register_node("bestlobster:potato_wild", {
+	description = ("Wild Potatoes"),
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"bestlobster_potato_wild.png"},
+	inventory_image = "bestlobster_potato_wild.png",
+	wield_image = "bestlobster_potato_wild.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {snappy = 3, attached_node = 1, flammable = 4},
+	drop = "bestlobster:seed_potato",
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-6 / 16, -8 / 16, -6 / 16, 6 / 16, 5 / 16, 6 / 16},
+	},
+})
+
+minetest.register_node("bestlobster:carrot_wild", {
+	description = ("Wild Carrots"),
+	drawtype = "plantlike",
+	waving = 1,
+	tiles = {"bestlobster_carrot_wild.png"},
+	inventory_image = "bestlobster_carrot_wild.png",
+	wield_image = "bestlobster_carrot_wild.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups = {snappy = 3, attached_node = 1, flammable = 4},
+	drop = "bestlobster:seed_carrot",
+	sounds = default.node_sound_leaves_defaults(),
+	selection_box = {
+		type = "fixed",
+		fixed = {-6 / 16, -8 / 16, -6 / 16, 6 / 16, 5 / 16, 6 / 16},
+	},
+})
