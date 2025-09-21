@@ -80,6 +80,20 @@ minetest.register_craft({
 
 
 
+minetest.register_craftitem("bestlobster:seafood_boil", {
+	description = ("Seafood Boil"),
+	inventory_image = "bestlobster_seafood_boil.png",
+	on_use = minetest.item_eat(18),
+	groups = {food_seafood_boil = 1, flammable = 2},
+})
+
+minetest.register_craft({
+	type = "shapeless",
+	output = "bestlobster:seafood_boil",
+	recipe = {"bestlobster:potato_boiled", "bestlobster:potato_boiled", "bestlobster:carrot_boiled", "bestlobster:carrot_boiled", "bestlobster:lobster"},
+})
+
+
 
 -- Lobster Trap
 
@@ -152,4 +166,13 @@ minetest.register_tool("bestlobster:lobster_tool", {
 	},
 	sound = {breaks = "default_tool_breaks"},
 	groups = {pickaxe = 1, axe = 1, shovel = 1}
+})
+
+minetest.register_craft({
+	output = "bestlobster:lobster_tool",
+	recipe = {
+		{"bestlobster:lobster", "default:mese_crystal", "bestlobster:lobster"},
+		{"", "default:obsidian_shard", ""},
+		{"", "default:obsidian_shard", ""},
+	}
 })
